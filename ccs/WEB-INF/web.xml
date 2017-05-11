@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>ccs</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>initServlet</servlet-name>
+  	<servlet-class>servlet.InitServlet</servlet-class>
+  	<!-- 配置获取access_token所需参数appid和appsecret -->
+  	<init-param>
+  		<param-name>appid</param-name>
+  		<param-value>wx3de5fc2b285d2ff5</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>appsecret</param-name>
+  		<param-value>f066f9e5e6f5cce1a92b4f9d5a791566</param-value>
+  	</init-param>
+  	<load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>oauthServlet</servlet-name>
+  	<servlet-class>servlet.OAuthServlet</servlet-class>
+  	<init-param>
+  		<param-name>appid</param-name>
+  		<param-value>wx3de5fc2b285d2ff5</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>appsecret</param-name>
+  		<param-value>f066f9e5e6f5cce1a92b4f9d5a791566</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>oauthServlet</servlet-name>
+  	<url-pattern>/oauthServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

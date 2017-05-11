@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="entity.Token" 
+		table="token">
+     <id name="tokenId" column="token_id" type="int">
+     	<generator class="native">
+     		<param name="sequence">token_seq</param>
+     	</generator>
+     </id>
+     <property name="accessToken" 	column="access_token"   type="string"></property>
+     <property name="expiresIn" 	column="expires_in"		type="integer"></property>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
